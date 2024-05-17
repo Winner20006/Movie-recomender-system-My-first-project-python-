@@ -1,0 +1,246 @@
+import tkinter as tk #library for the user interface
+# I uploaded the raw code as a text file incase the code doesn't open :)
+transformers_genres_2007 = ["Action", "Science Fiction", "Adventure","Robots"]
+transformers_2007_actors = ["Shia LaBeouf", "Megan Fox", "Josh Duhamel", "Tyrese Gibson", "Rachael Taylor", "Jon Voight", "Anthony Anderson", "John Turturro", "Kevin Dunn", "Julie White", "Bernie Mac"]
+avengers_endgame_genres = ["Action", "Adventure", "Drama", "Science Fiction", "Fantasy", "Thriller", "Superhero"]
+avengers_endgame_Actors = ["Robert Downey Jr.", "Chris Evans", "Chris Hemsworth", "Mark Ruffalo", "Scarlett Johansson", "Jeremy Renner", "Paul Rudd", "Don Cheadle", "Karen Gillan", "Bradley Cooper", "Sean Gunn", "Brie Larson", "Josh Brolin", "Benedict Cumberbatch", "Tom Holland", "Chadwick Boseman", "Elizabeth Olsen", "Anthony Mackie", "Sebastian Stan", "Vin Diesel", "Dave Bautista", "Pom Klementieff", "Danai Gurira", "Tessa Thompson", "Gwyneth Paltrow", "Samuel L. Jackson", "Zoe Saldana", "Benedict Wong", "Letitia Wright", "Winston Duke", "Jon Favreau", "Tilda Swinton", "Taika Waititi", "Terry Notary", "John Slattery", "Natalie Portman", "Rene Russo", "Michael Douglas", "Michelle Pfeiffer", "Linda Cardellini", "William Hurt", "Benicio del Toro", "Elizabeth Debicki"]
+The_Dark_knight=["Action","Crime","Drama"]
+The_Dark_knight_Actors=["Christian Bale","Heath Ledger","Aaron Eckhart","Michael Caine","Maggie Gyllenhaal","Gary Oldman","Morgan Freeman"]
+one_piece_film_red_geners=["Action","Adventure","Comedy","Fantasy","Anime","Pirates"]
+one_piece_film_red_voice_actors = ["Mayumi Tanaka", "Kazuya Nakai", "Akemi Okamura", "Kappei Yamaguchi", "Hiroaki Hirata", "Ikue Otani", "Yuriko Yamaguchi", "Kazuki Yao", "Cho"]
+dragon_ball_super_hero_genres = ["Animation", "Action", "Adventure", "Fantasy", "Sci-Fi", "Comedy","Anime"]
+dragon_ball_super_hero_actors = ["Masako Nozawa", "Aya Hisakawa", "Ryō Horikawa", "Ryūsei Nakao", "Mayumi Tanaka", "Toshio Furukawa", "Takeshi Kusao", "Yūko Minaguchi"]
+interstellar_genres = ["Sci-Fi", "Adventure", "Drama", "Thriller", "Mystery", "Fantasy", "Action", "Space", "Time Travel", "Exploration"]
+interstellar_actors = ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine", "Mackenzie Foy", "Ellen Burstyn", "John Lithgow", "Casey Affleck", "Topher Grace", "David Gyasi"]
+pacific_rim_genres = ["Action", "Adventure", "Sci-Fi", "Robots", "Fantasy", "Thriller", "Drama", "Monster", "Futuristic", "Apocalyptic", "Technology"]
+pacific_rim_actors = ["Charlie Hunnam", "Idris Elba", "Rinko Kikuchi", "Charlie Day", "Rob Kazinsky", "Max Martini", "Ron Perlman", "Clifton Collins Jr.", "Diego Klattenhoff", "Burn Gorman", "Robert Maillet", "Larry Joe Campbell", "Brad William Henke", "Rob Archer", "Joe Pingue"]
+jojos_phantom_blood_genres = ["Action", "Adventure", "Supernatural", "Fantasy", "Drama", "Horror", "Mystery", "Historical", "Psychological", "Thriller", "Magic", "Surreal","Anime"]
+jojos_phantom_blood_actors = ["Kazuyuki Okitsu", "Kunihiro Kawamoto", "Yuki Ono", "Tomokazu Sugita", "Unsho Ishizuka", "Takehito Koyasu", "Naoya Uchida", "Kiyoyuki Yanada", "Katsuji Mori", "Junya Enoki", "Takuya Sato", "Wataru Takagi", "Hiroki Tochi", "Takahiro Mizushima", "Nobuo Tanaka"]
+top_gun_maverick_genres = ["Action", "Drama", "Adventure", "Thriller", "War", "Romance", "Military", "Aviation", "Suspense", "Comedy", "Crime", "Biography","Planes"]
+top_gun_maverick_actors = ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Jon Hamm", "Glen Powell", "Lewis Pullman", "Ed Harris", "Val Kilmer", "Monica Barbaro", "Thomasin McKenzie", "Charles Parnell", "Bashir Salahuddin", "Jay Ellis", "Danny Ramirez"]
+harry_potter_order_of_the_phoenix_genres = ["Fantasy", "Adventure", "Family", "Action", "Drama", "Mystery", "Magic", "Teen", "Thriller", "Supernatural", "Coming-of-age", "Friendship", "School", "Dark Fantasy", "Quest", "Conflict", "Hero's Journey", "British"]
+harry_potter_order_of_the_phoenix_actors = ["Daniel Radcliffe", "Emma Watson", "Rupert Grint", "Ralph Fiennes", "Michael Gambon", "Gary Oldman", "Emma Thompson", "Alan Rickman", "Helena Bonham Carter", "David Thewlis"]
+
+movie_list=[]
+
+movies={"Transformers":{"Genres":transformers_genres_2007,"year":2007,"Run Time": 143,"Rating":7.0,"Actors":transformers_2007_actors},
+        "Avengers:Endgame":{"Genres":avengers_endgame_genres,"year":2019,"Run Time":182,"Rating":8.4,"Actors":avengers_endgame_Actors},
+        "The Dark Knight": {"Genres":The_Dark_knight,"year":2008,"Run Time":152,"Rating":9.0,"Actors":The_Dark_knight_Actors}, 
+        "One Piece Film: Red": {"Genres":one_piece_film_red_geners,"year":2022,"Run Time":120,"Rating":8.2,"Actors":one_piece_film_red_voice_actors},
+        "Dragon Ball Super:Hero": {"Genres": dragon_ball_super_hero_genres, "year": 2022, "Run Time": 100, "Rating": 8.2, "Actors": dragon_ball_super_hero_actors},
+        "Interstellar": {"Genres": interstellar_genres, "year": 2014, "Run Time": 169, "Rating": 8.6, "Actors": interstellar_actors},
+        "Pacific Rim": {"Genres": pacific_rim_genres, "year": 2013, "Run Time": 131, "Rating": 6.9, "Actors": pacific_rim_actors},
+        "JoJo's Bizarre Adventure: Phantom Blood": {"Genres": jojos_phantom_blood_genres, "year": 2012, "Run Time": 100, "Rating": 7.9, "Actors": jojos_phantom_blood_actors},
+        "Top Gun: Maverick": {"Genres": top_gun_maverick_genres, "year": 2022, "Run Time": 130, "Rating": 8.2, "Actors": top_gun_maverick_actors},
+        "Harry Potter and the Order of the Phoenix": {"Genres": harry_potter_order_of_the_phoenix_genres, "year": 2007, "Run Time": 138, "Rating": 7.5, "Actors": harry_potter_order_of_the_phoenix_actors}}
+
+def find_movies_by_genre():
+    movie_list=[]
+    genre = entry_genre.get().capitalize()
+    for title, movie_info in movies.items():
+        if genre in movie_info["Genres"]:
+            movie_list.append(title)
+    if len(movie_list) != 0:
+        result_text.delete(1.0, tk.END)  
+        result_text.insert(tk.END, f"Based on your love for {genre} movies,here are some movies you might enjoy:\n")    
+        for movie in movie_list:
+            result_text.insert(tk.END, f"{movie}\n")
+    else:
+        result_text.delete(1.0, tk.END)
+        result_text.insert(tk.END, f"No movies found in the {genre} genre\n")
+        
+def find_movie():
+    found = 0
+    movie_finder = entry_movie.get().strip().lower() 
+    result_text.delete(1.0, tk.END)  # Clear previous result
+    for title in movies:
+        if movie_finder in title.lower():
+            result_text.insert(tk.END, f"\n{title}:\n")
+            for movie_title, movie_info in movies[title].items():
+                if movie_title == 'Actors' or movie_title == 'Genres':
+                    result_text.insert(tk.END, f"\n{movie_title} are\n")
+                    for i in range(len(movie_info)):
+                        result_text.insert(tk.END, f"{movie_info[i]}\n") # to acces the list or actors or geners
+                else: 
+                    result_text.insert(tk.END, f"{movie_title} is {movie_info}\n")
+            found = 1
+    if found==0:
+        result_text.insert(tk.END, "Movie not found\n\n")
+def is_float(value):
+    try:
+        float(value)
+        return True
+    except:
+        return False
+
+def filter_movies():
+    result_text.delete(1.0, tk.END)  # Clear previous result
+    rating_input = entry_rating.get()  # to get input from GUI
+    year_input = entry_year.get()
+    rcounter=0
+    ycounter=0
+    ratecounter = 0
+    if rating_input and year_input:
+       result_text.insert(tk.END, "Invalid.\nEnter only rating or year not both at the same time :)\n") 
+       return
+    if rating_input:
+     if is_float(rating_input) or rating_input.isdigit():
+        ratecounter = 1
+        if float(rating_input) < 0.0 or float(rating_input) > 10.0: 
+          result_text.insert(tk.END, "Invalid rating(Must be in range from 0 to 10)\n")
+          return
+     else: 
+        result_text.insert(tk.END, "String detected please enter a number...\n")
+        return
+     if ratecounter ==1:
+        result_text.delete(1.0, tk.END)
+        result_text.insert(tk.END, f"The rating is {float(rating_input)}\n")
+        for title, info in movies.items():
+          if float(info['Rating']) == float(rating_input):
+            rcounter=1
+            result_text.insert(tk.END, "\n***************************\n")
+            result_text.insert(tk.END, f"Movie: {title}\n")
+            result_text.insert(tk.END, f"Genres: {', '.join(info['Genres'])}\n")
+            result_text.insert(tk.END, f"Year: {info['year']}\n")
+            result_text.insert(tk.END, f"Run Time: {info['Run Time']} minutes\n")
+            result_text.insert(tk.END, f"Rating: {info['Rating']}\n")
+            result_text.insert(tk.END, f"Actors: {', '.join(info['Actors'])}\n")
+            result_text.insert(tk.END, "\n***************************\n")
+        if rcounter==0:
+           result_text.delete(1.0, tk.END)  
+           result_text.insert(tk.END, "A movie with this rating was not found\n")       
+    if year_input:
+     if year_input<'1887' or year_input>'2025': # first movie was in 1887
+        result_text.insert(tk.END, "A movie with this year is not found\n")
+     else: 
+      result_text.delete(1.0, tk.END) 
+      result_text.insert(tk.END, f"The filter for year of {year_input}\n")
+      for title, info in movies.items():
+         if info['year']== int(year_input):
+            ycounter=1
+            result_text.insert(tk.END, "***************************\n")
+            result_text.insert(tk.END, f"Movie: {title}\n")
+            result_text.insert(tk.END, f"Genres: {', '.join(info['Genres'])}\n")
+            result_text.insert(tk.END, f"Year: {info['year']}\n")
+            result_text.insert(tk.END, f"Run Time: {info['Run Time']} minutes\n")
+            result_text.insert(tk.END, f"Rating: {info['Rating']}\n")
+            result_text.insert(tk.END, f"Actors: {', '.join(info['Actors'])}\n")
+            result_text.insert(tk.END, "***************************\n")
+      if ycounter==0:
+            result_text.delete(1.0, tk.END)
+            result_text.insert(tk.END, "A movie with this year is not found\n")
+    
+def insert_movie():
+    new_movie = entry_movie_name.get().strip().capitalize()
+    rcounter=0 
+    ycounter=0 
+    ratecounter=0
+    if new_movie in movies:
+        result_text.delete(1.0, tk.END)
+        result_text.insert(tk.END, "Movie with this name already exists\n")
+        return # acts like the break statment will never reach line 122
+    genres = entry_genres.get().capitalize().strip().split(',')
+    capitalized_singers=[]
+    for singer in genres:
+     capitalized_singers.append(singer.capitalize())
+
+    year =entry_year_new.get()
+    runtime = entry_runtime.get()
+    rating = entry_rating_new.get()
+    if runtime and rating and year: 
+       if  runtime.isdigit():
+        rcounter = 1
+       if is_float(rating) or rating.isdigit():
+        ratecounter = 1
+       if  year.isdigit():
+        ycounter = 1
+       if   rcounter==0  or  ratecounter==0 or ycounter==0:
+          result_text.delete(1.0, tk.END) 
+          result_text.insert(tk.END, "Invalid input\n")
+       else: 
+           year =int(entry_year_new.get())
+           runtime = int(entry_runtime.get())
+           rating = float(entry_rating_new.get()) 
+           actors = entry_actors.get().strip().split(',')
+           movies[new_movie] = {"Genres": capitalized_singers, "year": year, "Run Time": runtime, "Rating": rating, "Actors": actors}
+           result_text.delete(1.0, tk.END)
+           result_text.insert(tk.END, "New movie inserted successfully\n\n")
+
+       
+
+root = tk.Tk()
+root.title("Movie Finder")
+
+# Find movies by genre
+label_genre = tk.Label(root, text="Enter a movie genre:")
+label_genre.grid(row=0, column=0, sticky="w", padx=10, pady=5)
+entry_genre = tk.Entry(root)
+entry_genre.grid(row=0, column=1, padx=10, pady=5)
+button_genre = tk.Button(root, text="Find movie genre", command=find_movies_by_genre)
+button_genre.grid(row=0, column=2, padx=10, pady=5)
+
+# Find movie by name
+label_movie = tk.Label(root, text="Find movie by name")
+label_movie.grid(row=1, column=0, sticky="w", padx=10, pady=5)
+entry_movie = tk.Entry(root)
+entry_movie.grid(row=1, column=1, padx=10, pady=5)
+button_movie = tk.Button(root, text="Find Movie", command=find_movie)
+button_movie.grid(row=1, column=2, padx=10, pady=5)
+
+# Filter movies
+label_filter = tk.Label(root, text="Filter Movies:")
+label_filter.grid(row=2, column=0, sticky="w", padx=10, pady=5)
+
+label_rating = tk.Label(root, text="Enter a rating:")
+label_rating.grid(row=3, column=0, sticky="w", padx=10, pady=5)
+entry_rating = tk.Entry(root)
+entry_rating.grid(row=3, column=1, padx=10, pady=5)
+
+label_year = tk.Label(root, text="Enter a year:")
+label_year.grid(row=4, column=0, sticky="w", padx=10, pady=5)
+entry_year = tk.Entry(root)
+entry_year.grid(row=4, column=1, padx=10, pady=5)
+
+button_filter = tk.Button(root, text="Filter Movies", command=filter_movies)
+button_filter.grid(row=5, column=1, padx=10, pady=5)
+
+# Text widget to display the result
+result_text = tk.Text(root, height=15, width=80)
+result_text.grid(row=6, column=0, columnspan=3, padx=10, pady=5)
+label_new_movie = tk.Label(root, text="Insert a New Movie:")
+label_new_movie.grid(row=7, column=0, sticky="w", padx=10, pady=5)
+
+label_movie_name = tk.Label(root, text="Movie Name:")
+label_movie_name.grid(row=8, column=0, sticky="w", padx=10, pady=5)
+entry_movie_name = tk.Entry(root)
+entry_movie_name.grid(row=8, column=1, padx=10, pady=5)
+
+label_genres = tk.Label(root, text="Genres (comma-separated):")
+label_genres.grid(row=9, column=0, sticky="w", padx=10, pady=5)
+entry_genres = tk.Entry(root)
+entry_genres.grid(row=9, column=1, padx=10, pady=5)
+
+label_year_new = tk.Label(root, text="Year:")
+label_year_new.grid(row=10, column=0, sticky="w", padx=10, pady=5)
+entry_year_new = tk.Entry(root)
+entry_year_new.grid(row=10, column=1, padx=10, pady=5)
+
+label_runtime = tk.Label(root, text="Run Time (minutes):")
+label_runtime.grid(row=11, column=0, sticky="w", padx=10, pady=5)
+entry_runtime = tk.Entry(root)
+entry_runtime.grid(row=11, column=1, padx=10, pady=5)
+
+label_rating_new = tk.Label(root, text="Rating:")
+label_rating_new.grid(row=12, column=0, sticky="w", padx=10, pady=5)
+entry_rating_new = tk.Entry(root)
+entry_rating_new.grid(row=12, column=1, padx=10, pady=5)
+
+label_actors = tk.Label(root, text="Actors (comma-separated):")
+label_actors.grid(row=13, column=0, sticky="w", padx=10, pady=5)
+entry_actors = tk.Entry(root)
+entry_actors.grid(row=13, column=1, padx=10, pady=5)
+
+button_insert = tk.Button(root, text="Insert Movie", command=insert_movie)
+button_insert.grid(row=14, column=1, padx=10, pady=5)
+
+root.mainloop()
